@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import Main from "./components/main"
 
 function App() {
   return (
@@ -8,14 +9,16 @@ function App() {
       <Layout style={{ background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover' }}>
         <Header transparent title="Menu" style={{ color: 'white' }}>
         </Header>
-        <Drawer Menu="Menu">
+        <Drawer title="Title">
           <Navigation>
             <a href="/">Link</a>
             <a href="/">Link</a>
             <a href="/">Link</a>
           </Navigation>
         </Drawer>
-        <Content />
+        <Content>
+
+        </Content>
       </Layout>
     </div>
   );
