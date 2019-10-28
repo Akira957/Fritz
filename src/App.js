@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ height: '300px', position: 'relative' }}>
-      <Layout style={{ background: 'url(http://www.getmdl.io/assets/demos/transparent.jpg) center / cover' }}>
-        <Header transparent title="Menu" style={{ color: 'white' }} className="header-color">
+    <div className="demo-big-content">
+      <Layout>
+        <Header title="Menu" style={{ color: 'white' }} className="header-color" scroll>
         </Header>
         <Drawer title="Title">
           <Navigation>
