@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
+import { Layout, Header, Navigation, Content } from 'react-mdl';
 import Main from "./components/main"
 import { Link } from "react-router-dom";
 
@@ -8,16 +8,15 @@ function App() {
   return (
     <div className="demo-big-content">
       <Layout>
-        <Header title="Menu" style={{ color: 'white' }} className="header-color" scroll>
-        </Header>
-        <Drawer title="Title">
+        <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">MyPortfolio</Link>} scroll>
           <Navigation>
-            <Link to="/">Main Menu</Link>
-            <Link to="/About">About</Link>
-            <Link to="/Artist">Artist</Link>
-            <Link to="/Categories">Categories</Link>
+            <Link to="/">Menu</Link>
+            <Link to="/About">About Me</Link>
+            <Link to="/Artist">Projects</Link>
+            <Link to="/Categories">Contact</Link>
           </Navigation>
-        </Drawer>
+        </Header>
+
         <Content>
           <div className="page-content" />
           <Main />

@@ -12,6 +12,9 @@ class Landing extends Component {
                             className="avatar-img" />
                         <div className="banner-text">
                             <h1>Collector of Art</h1>
+
+                            <hr />
+                            <p>This is her collection of art over the years</p>
                         </div>
                     </Cell>
                 </Grid>
