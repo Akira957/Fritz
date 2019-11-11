@@ -12,8 +12,8 @@ function App() {
           <Navigation>
             <Link to="/">Menu</Link>
             <Link to="/About">About Me</Link>
-            <Link to="/Artist">Projects</Link>
-            <Link to="/Categories">Contact</Link>
+            <Link to="/Artist">Artists</Link>
+            <Link to="/Categories">Categories</Link>
           </Navigation>
         </Header>
 
