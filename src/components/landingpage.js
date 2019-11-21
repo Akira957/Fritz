@@ -15,6 +15,7 @@ class Landing extends Component {
 
                             <hr />
                             <p>This is her collection of art over the years</p>
+
                         </div>
                     </Cell>
                 </Grid>
