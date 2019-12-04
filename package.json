@@ -1,0 +1,24 @@
+{
+  "name": "fritz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akira957/Fritz.git"
+  },
+  "author": "Robert Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akira957/Fritz/issues"
+  },
+  "homepage": "https://github.com/Akira957/Fritz#readme"
+}
