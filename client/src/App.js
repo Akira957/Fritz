@@ -11,7 +11,7 @@ function App() {
         <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">Sarah Fritz</Link>} scroll>
           <Navigation>
             <Link to="/">Menu</Link>
-            <Link to="/About">About Me</Link>
+            <Link to="/About">About</Link>
             <Link to="/Artist">Artists</Link>
             <Link to="/Categories">Categories</Link>
           </Navigation>
