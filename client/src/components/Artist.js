@@ -1,41 +1,36 @@
 import React, { Component } from "react";
-import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+
 
 class Artist extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { activeTab: 0 };
-      }
-    
-      toggleCategories() {
-    
-        if(this.state.activeTab === 0){
-          return(
-            <div className="artists-grid">
-              
-            </div>
-          )
-        } else if(this.state.activeTab === 1) {
-          return (
-            <div><h1>Artist 1</h1></div>
-          )
-        } else if(this.state.activeTab === 2) {
-          return (
-            <div><h1>Artist 2</h1></div>
-          )
-        } else if(this.state.activeTab === 3) {
-          return (
-            <div><h1>Artist 3</h1></div>
-          )
-        }
-      }
+  state = {
+    category: []
+  }
 
-    render() {
-        return (
-            <h1>Names of the artists</h1>
-        )
-    }
+  componentDidMount() {
+    this.getCategory();
+  }
+  getCategory = _ => {
+    fetch("http://localhost:3001/category")
+      .then(response => response.json())
+      .then(response => this.setState({ category: response.data }))
+      .catch(err => console.error(err))
+  }
+
+
+  renderCategory = ({ category_id, category_name }) => <div key={category_id}>{category_name}</div>
+
+
+
+  render() {
+    const { category } = this.state;
+    return (
+      <div className="App">
+        <h1>Names of the artists</h1>
+        {category.map(this.renderCategory)}
+      </div>
+    );
+  }
 }
 
 export default Artist;

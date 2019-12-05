@@ -1,8 +1,11 @@
-const express = require('express');
-
-const mongoose = require("mongoose");
-const routes = require("./routes");
+const express = require("express");
+const cors = require("cors")
+const path = require("path");
+const mysql = require("mysql");
+// const routes = require("./routes");
 const app = express();
+
+app.use(cors());
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -13,7 +16,50 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
+
+const SELECT_ALL = "SELECT * FROM category";
+
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Apparatus987..",
+    database: "sarah_db"
+});
+
+connection.connect(err => {
+    if (err) {
+        return err;
+    }
+});
+
+app.get('/', (req, res) => {
+    res.send("find the /category")
+});
+
+app.get('/category/add', (req, res) => {
+    const { category_name } = req.query;
+    const INSERT_CATEGORY = `INSERT INTO category (category_name) VALUES('${category_name}')`
+    connection.query(INSERT_CATEGORY, (err, results) => {
+        if (err) {
+            return res.send(err)
+        } else {
+            return res.send("added category")
+        }
+    })
+})
+
+app.get("/category", (req, res) => {
+    connection.query(SELECT_ALL, (err, results) => {
+        if (err) {
+            return res.send(err)
+        } else {
+            return res.json({
+                data: results
+            })
+        }
+    });
+});
 
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
