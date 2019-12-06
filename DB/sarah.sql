@@ -28,35 +28,28 @@ PRIMARY KEY
         (ID)
 );
 
-        INSERT INTO category
-            (category_name)
-        VALUES
-            ("Glass Art");
-
-        INSERT INTO category
-            (category_name)
-        VALUES
-            ("Paintings");
-
-        INSERT INTO category
-            (category_name)
-        VALUES
-            ("Sculptures");
-
-        INSERT INTO artist
-            (artist_name, website, wiki)
-        VALUES
-            ("RR", "website1", "wiki1");
-
-        INSERT INTO artist
-            (artist_name, website, wiki)
-        VALUES
-            ("SS", "website2", "wiki2");
-
-        INSERT INTO artist
-            (artist_name, website, wiki)
-        VALUES
-            ("WW", "website3", "wiki3");
-
-        SELECT *
-        FROM picture
+        CREATE TABLE picture
+        (
+            ID INT NOT NULL
+            AUTO_INCREMENT,
+title VARCHAR
+            (255) NOT NULL,
+acquired_from VARCHAR
+            (255) NOT NULL,
+provenance VARCHAR
+            (255) NOT NULL,
+book_ref1 VARCHAR
+            (255) NOT NULL,
+book_ref2 VARCHAR
+            (255) NOT NULL,
+book_ref3 VARCHAR
+            (255) NOT NULL, 
+signature BOOLEAN DEFAULT false,
+authenticity BOOLEAN DEFAULT false,
+price DECIMAL
+            (10, 2) NULL,
+date_created DATE NOT NULL,
+purchase_date DATE NOT NULL,
+PRIMARY KEY
+            (ID)
+);      
