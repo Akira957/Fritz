@@ -1,5 +1,4 @@
 import React, { Component, Route } from "react";
-import { Link, Switch } from "react-router-dom";
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 
 class Categories extends Component {
@@ -24,6 +23,7 @@ class Categories extends Component {
 
   render() {
     const { category } = this.state;
+    console.log(category)
     return (
       <div className="contact-body">
         <Cell col={6}>
@@ -42,7 +42,7 @@ class Categories extends Component {
             <div className="category-list">
 
 
-              <a href="http://localhost:3001" onClick={this.getCategory}>{category.map(this.renderCategory)}</a>
+              <a href="http://localhost:3001/category" onClick={this.getCategory.id}>{category.map(this.renderCategory)}</a>
 
             </div>
           </Grid>
