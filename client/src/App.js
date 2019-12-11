@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Layout, Header, Navigation, Content } from 'react-mdl';
-import Main from "./components/main"
+import Main from "./pages/main"
 import { Link } from "react-router-dom";
 
 function App() {

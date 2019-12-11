@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors")
 const path = require("path");
 const mysql = require("mysql");
+const bodyParser = require("body-parser");
 // const routes = require("./routes");
 const app = express();
 
@@ -9,8 +10,8 @@ app.use(cors());
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
@@ -61,9 +62,18 @@ app.get("/category", (req, res) => {
     });
 });
 
+app.get("/:id", (req, res) => {
+    connection.query("SELECT * FROM category where ID = ?", [req.params.id], (err, data) => {
+        if (err) throw err;
+
+        console.log(data)
+        res.json({ data: [0] })
+    });
+});
+
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 // Start the API server
