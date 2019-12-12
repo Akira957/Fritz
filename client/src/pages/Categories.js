@@ -21,7 +21,7 @@ class Categories extends Component {
   }
 
 
-  renderCategory = ({ category_id, category_name }) => <List><Link to="/Stub" key={category_id}>{category_name}</Link></List>
+  renderCategory = ({ category_id, category_name }) => <ListItem><Link to="/Stub" key={category_id}>{category_name}</Link></ListItem>
 
 
   render() {
