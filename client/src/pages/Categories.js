@@ -1,6 +1,8 @@
 import React, { Component, Route } from "react";
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 
+
+
 class Categories extends Component {
 
   state = {
@@ -34,11 +36,8 @@ class Categories extends Component {
             <div className="category-list">
 
 
-              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[0]}</a>
-              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[1]}</a>
-              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[2]}</a>
-              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[3]}</a>
-              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[4]}</a>
+              <a href="http://localhost:3000/Stub" onClick={this.getCategory}>{category.map(this.renderCategory)}</a>
+
 
             </div>
           </Grid>
