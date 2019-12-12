@@ -34,7 +34,11 @@ class Categories extends Component {
             <div className="category-list">
 
 
-              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)}</a>
+              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[0]}</a>
+              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[1]}</a>
+              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[2]}</a>
+              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[3]}</a>
+              <a href="http://localhost:3001/:id" onClick={this.getCategory}>{category.map(this.renderCategory)[4]}</a>
 
             </div>
           </Grid>
