@@ -1,5 +1,6 @@
 import React, { Component, Route } from "react";
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
+import { Link } from "react-router-dom";
 
 
 
@@ -20,7 +21,7 @@ class Categories extends Component {
   }
 
 
-  renderCategory = ({ category_id, category_name }) => <div key={category_id}>{category_name}</div>
+  renderCategory = ({ category_id, category_name }) => <List><Link to="/Stub" key={category_id}>{category_name}</Link></List>
 
 
   render() {
@@ -36,7 +37,9 @@ class Categories extends Component {
             <div className="category-list">
 
 
-              <a href="http://localhost:3000/Stub" onClick={this.getCategory}>{category.map(this.renderCategory)}</a>
+              <List>
+                {category.map(this.renderCategory)}
+              </List>
 
 
             </div>
