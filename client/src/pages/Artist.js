@@ -27,7 +27,7 @@ class Artist extends Component {
     return (
       <div className="App">
         <h1>Names of the artists</h1>
-        {category.map(this.renderCategory)}
+        <a href="http://localhost:3001/category" onClick={this.renderCategory}>{category.map(this.renderCategory)}</a>
       </div>
     );
   }
