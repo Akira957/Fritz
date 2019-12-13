@@ -16,7 +16,7 @@ class Picture extends Component {
                     <h1>Pictures for the Gallery</h1>
                     <hr />
                     <Grid>
-                        <div className="stubbed-list">
+                        <div className="picture-list">
 
 
                             <h2>Picture Data Here</h2>
@@ -30,4 +30,4 @@ class Picture extends Component {
     }
 }
 
-export default Stub;
+export default Picture;
