@@ -7,7 +7,7 @@ class Landing extends Component {
             <div style={{ width: '100%', margin: 'auto' }}>
                 <Grid className="landing-grid">
                     <Cell col={12}>
-                        <img src="https://media.licdn.com/dms/image/C4E03AQGFdczggbUTpQ/profile-displayphoto-shrink_800_800/0?e=1577923200&v=beta&t=0Amc8fL_qYTb4mKhPsgyuHzNEiBaYs90CEbMhwDangQ"
+                        <img src="https://media.licdn.com/dms/image/C4E03AQGFdczggbUTpQ/profile-displayphoto-shrink_200_200/0?e=1583971200&v=beta&t=DsJpy2p4jIPBvWI9Jc8ZRQ_hMjeGsn9PJFfVFbj_jbw"
                             alt="avatar"
                             className="avatar-img" />
                         <div className="banner-text">

@@ -5,6 +5,7 @@ import About from "./About";
 import Artist from "./Artist";
 import Categories from "./Categories";
 import Stub from "./Stub";
+import Artwork from "./Artwork";
 
 const Main = () => (
     <Switch>
@@ -13,6 +14,7 @@ const Main = () => (
         <Route path="/Artist" component={Artist} />
         <Route path="/Categories" component={Categories} />
         <Route path="/Stub" component={Stub} />
+        <Route path="/Artwork" component={Artwork} />
     </Switch>
 )
 

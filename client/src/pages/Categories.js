@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 class Categories extends Component {
 
   state = {
@@ -21,7 +22,7 @@ class Categories extends Component {
   }
 
 
-  renderCategory = ({ category_id, category_name }) => <ListItem><Link to={{ pathname: "./Stub", search: "?sort=name" }} key={category_id}>{category_name}</Link></ListItem>
+  renderCategory = ({ category_id, category_name }) => <ListItem><Link to={{ pathname: "./Artwork", search: "?sort=name", test: "this is a test" }} key={category_id}>{category_name}</Link></ListItem>
 
 
   render() {
